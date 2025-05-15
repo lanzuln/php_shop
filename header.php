@@ -1,4 +1,12 @@
-<?php ?>
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
+$mail = new PHPMailer(true);
+?>
 
 <!doctype html>
 <html lang="en" class="no-js">

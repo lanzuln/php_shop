@@ -1,4 +1,66 @@
-<?php include 'header.php';?>
+<?php include 'header.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+
+
+if (isset($_POST['send_email'])) {
+    $name = strip_tags($_POST['name']);
+    $email = strip_tags($_POST['email']);
+    $phone = strip_tags($_POST['phone']);
+    $message = trim(strip_tags($_POST['message'], '<br>'));
+    try {
+        if ($name == "") {
+            throw new Exception("Name is required");
+        }
+        if ($email == "") {
+            throw new Exception("Email is required");
+        }
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception('Please enter a valid email');
+        }
+        if ($phone == "") {
+            throw new Exception("Phone is required");
+        }
+        if ($message == "") {
+            throw new Exception("Message is required");
+        }
+
+
+        $mail = new PHPMailer(true);
+
+        $mail->isSMTP();
+        $mail->Host = 'sandbox.smtp.mailtrap.io';
+        $mail->SMTPAuth = true;
+        $mail->Port = 587;
+        $mail->Username = 'adec5c968238ad';
+        $mail->Password = '3fba3d9a65e926';
+        $mail->SMTPSecure = 'tls';
+    
+        $mail->setFrom('lanzu@gmail.com');
+        $mail->addAddress('user@gmail.com');
+        $mail->addReplyTo('lanzu_from@gmail.com');
+
+        $mail_message = '<h2>Visitor Information</h2>';
+        $mail_message .= '<strong>Name: </strong><br>' . $name . '<br><br>';
+        $mail_message .= '<strong>Email: </strong><br>' . $email . '<br><br>';
+        $mail_message .= '<strong>Phone: </strong><br>' . $phone . '<br><br>';
+        $mail_message .= '<strong>Message: </strong><br>' . nl2br($message) . '<br><br>';
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Contact Form Message';
+        $mail->Body = $mail_message;
+
+
+        $mail->send();
+        
+    } catch (Exception $e) {
+        $error_message = $e->getMessage();
+    }
+}
+?>
 
 <!-- breadcrumb start -->
 <div class="breadcrumb">
@@ -57,7 +119,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                     </div>
                 </div>
@@ -74,36 +136,48 @@
                         <p class="section-subheading">We would like to hear from you.</p>
                     </div>
                     <div class="contact-form--wrapper">
-                        <form action="#" class="contact-form">
+                        <?php if (isset($error_message) && $error_message != ''): ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?php echo $error_message; ?>
+                            </div>
+                        <?php endif; ?>
+                        <form action="" class="contact-form" method="post">
                             <div class="row">
                                 <div class="col-lg-4 col-md-12">
                                     <fieldset>
-                                        <input type="text" placeholder="Full Name *">
+                                        <input type="text" placeholder="Full Name *" name="name"
+                                            value="<?php echo isset($name) ? $name : ''; ?>">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-4 col-md-12">
                                     <fieldset>
-                                        <input type="email" placeholder="Email Address *">
+                                        <input type="email" placeholder="Email Address *" name="email"
+                                            value="<?php echo isset($email) ? $email : ''; ?>">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-4 col-md-12">
                                     <fieldset>
-                                        <input type="text" placeholder="Phone Number *">
+                                        <input type="text" placeholder="Phone Number *" name="phone"
+                                            value="<?php echo isset($phone) ? $phone : ''; ?>">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <fieldset>
-                                        <textarea cols="20" rows="6" placeholder="Message *"></textarea>
+                                        <textarea cols="20" rows="6" placeholder="Message *" name="message">
+                                            <?php echo isset($message) ? $message : ''; ?>
+                                        </textarea>
                                     </fieldset>
-                                    <button type="submit" class="position-relative review-submit-btn contact-submit-btn">SEND MESSAGE</button>
+                                    <button type="submit" name="send_email"
+                                        class="position-relative review-submit-btn contact-submit-btn">SEND
+                                        MESSAGE</button>
                                 </div>
-                            </div>                                    
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
         <!-- about banner end -->
-    </div>            
+    </div>
 </main>
-<?php include 'footer.php';?>
+<?php include 'footer.php'; ?>
