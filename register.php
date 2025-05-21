@@ -4,7 +4,7 @@
 <div class="breadcrumb">
     <div class="container">
         <ul class="list-unstyled d-flex align-items-center m-0">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="<?php echo BASE_URL;?>index.php">Home</a></li>
             <li class="ml_10 mr_10">
                 <i class="fas fa-chevron-right"></i>
             </li>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-12 mt-3">
                         <button type="submit" class="btn-primary d-block mt-3 btn-signin">CREATE ACCOUNT</button>
-                        <a href="login.php" class="btn-secondary mt-2 btn-signin">GO TO LOGIN PAGE</a>
+                        <a href="<?php echo BASE_URL;?>login.php" class="btn-secondary mt-2 btn-signin">GO TO LOGIN PAGE</a>
                     </div>
                 </div>
             </form>

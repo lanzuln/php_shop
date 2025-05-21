@@ -1,11 +1,11 @@
-<?php 
+<?php
 //এটা current file এর নাম বলে দিবে extension সহ।
 $page_name = basename($_SERVER['PHP_SELF']);
 
-$body_class = ($page_name == 'login.php' || $page_name == 'reset-password.php') ? 'body-login' : " ";
+$body_class = ($page_name == 'login.php' || $page_name == 'reset-password.php' ||  $page_name == 'forget-password.php') ? 'body-login' : " ";
 ?>
-    
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,5 +28,5 @@ $body_class = ($page_name == 'login.php' || $page_name == 'reset-password.php') 
 
 </head>
 
-<body class="<?php echo $body_class ;?>">
- 
+<body class="<?php echo $body_class; ?>">
+

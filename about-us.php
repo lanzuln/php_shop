@@ -3,7 +3,7 @@
 <div class="breadcrumb">
     <div class="container">
         <ul class="list-unstyled d-flex align-items-center m-0">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="<?php echo BASE_URL;?>index.php">Home</a></li>
             <li class="ml_10 mr_10">
                 <i class="fas fa-chevron-right"></i>
             </li>
@@ -27,21 +27,21 @@
                                 <li class="action-item d-flex">
                                     <div class="action-count">01</div>
                                     <div class="action-content">
-                                        <h4 class="action-title"><a href="#">Get A Quote</a></h4>
+                                        <h4 class="action-title"><a href="<?php echo BASE_URL;?>#">Get A Quote</a></h4>
                                         <p class="action-subtitle">Through True Rich Attended does no end it his mother since real had half every.</p>
                                     </div>
                                 </li>
                                 <li class="action-item d-flex">
                                     <div class="action-count">02</div>
                                     <div class="action-content">
-                                        <h4 class="action-title"><a href="#">Book An Appointment</a></h4>
+                                        <h4 class="action-title"><a href="<?php echo BASE_URL;?>#">Book An Appointment</a></h4>
                                         <p class="action-subtitle">Through True Rich Attended does no end it his mother since real.</p>
                                     </div>
                                 </li>
                                 <li class="action-item d-flex">
                                     <div class="action-count">03</div>
                                     <div class="action-content">
-                                        <h4 class="action-title"><a href="#">Get Your Service Done</a></h4>
+                                        <h4 class="action-title"><a href="<?php echo BASE_URL;?>#">Get Your Service Done</a></h4>
                                         <p class="action-subtitle">Ecstatic unsatiable saw his giving Remain expense you position concluded.</p>
                                     </div>
                                 </li>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="about-hero-img">
-                            <img src="assets/img/about/about-hero.jpg" alt="img">
+                            <img src="<?php echo BASE_URL;?>assets/img/about/about-hero.jpg" alt="img">
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
             <div class="row g-0 justify-content-center">
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="promotional-item overlay-blue">
-                        <img src="assets/img/about/p1.jpg" alt="img">
+                        <img src="<?php echo BASE_URL;?>assets/img/about/p1.jpg" alt="img">
                         <div class="promotional-absolute">
                             <div class="promotional-content text-center">
                                 <h2 class="promo-title">Serve our customers and always deliver the customer service</h2>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="promotional-item overlay-black">
-                        <img src="assets/img/about/p2.jpg" alt="img">
+                        <img src="<?php echo BASE_URL;?>assets/img/about/p2.jpg" alt="img">
                         <div class="promotional-absolute">
                             <div class="promotional-content text-center">
                                 <h2 class="promo-title">To be the world’s most eader in automotive business solutions.</h2>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="promotional-item overlay-yellow">
-                        <img src="assets/img/about/p3.jpg" alt="img">
+                        <img src="<?php echo BASE_URL;?>assets/img/about/p3.jpg" alt="img">
                         <div class="promotional-absolute">
                             <div class="promotional-content text-center">
                                 <h2 class="promo-title">We value the service we provide and our loyal returning customers </h2>

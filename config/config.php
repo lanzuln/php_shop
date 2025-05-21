@@ -11,8 +11,8 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-// define('BASE_URL','http://localhost:8080/project/');
-// define('ADMIN_URL', BASE_URL.'admin/');
+define('BASE_URL','http://localhost/php_shop/');
+define('ADMIN_URL', BASE_URL.'admin/');
 
 define('SMTP_HOST', 'sandbox.smtp.mailtrap.io');
 define('SMTP_PORT', '587');

@@ -76,7 +76,7 @@ if (isset($_POST['send_email'])) {
 <div class="breadcrumb">
     <div class="container">
         <ul class="list-unstyled d-flex align-items-center m-0">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="<?php echo BASE_URL;?>index.php">Home</a></li>
             <li class="ml_10 mr_10">
                 <i class="fas fa-chevron-right"></i>
             </li>
@@ -101,8 +101,8 @@ if (isset($_POST['send_email'])) {
                                 </div>
                                 <div class="contact-details">
                                     <h2 class="contact-title">Mail Address</h2>
-                                    <a class="contact-info" href="mailto:info@example.com">info@example.com</a>
-                                    <a class="contact-info" href="mailto:info2@example.com">info2@example.com</a>
+                                    <a class="contact-info" href="<?php echo BASE_URL;?>mailto:info@example.com">info@example.com</a>
+                                    <a class="contact-info" href="<?php echo BASE_URL;?>mailto:info2@example.com">info2@example.com</a>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +124,8 @@ if (isset($_POST['send_email'])) {
                                 </div>
                                 <div class="contact-details">
                                     <h2 class="contact-title">Phone Number</h2>
-                                    <a class="contact-info" href="tel:(201) 555-0124">(201) 555-0124</a>
-                                    <a class="contact-info" href="tel:(307) 555-0133">(307) 555-0133</a>
+                                    <a class="contact-info" href="<?php echo BASE_URL;?>tel:(201) 555-0124">(201) 555-0124</a>
+                                    <a class="contact-info" href="<?php echo BASE_URL;?>tel:(307) 555-0133">(307) 555-0133</a>
                                 </div>
                             </div>
                         </div>

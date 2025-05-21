@@ -18,13 +18,13 @@ $mail = new PHPMailer(true);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Ecommerce Website</title>
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>assets/img/favicon.png" type="image/x-icon">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="<?php echo BASE_URL;?>https://fonts.googleapis.com">
+    <link rel="preconnect" href="<?php echo BASE_URL;?>https://fonts.gstatic.com" crossorigin>
+    <link href="<?php echo BASE_URL;?>https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL;?>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
     <style>
         :root {
@@ -74,9 +74,9 @@ $mail = new PHPMailer(true);
             --section-subheading-font-weight: 400;
         }
     </style>
-    <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/spacing.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/vendor.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/spacing.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/style.css">
 </head>
 
 <body>
@@ -90,7 +90,7 @@ $mail = new PHPMailer(true);
                     <div class="col-lg-3 d-lg-block d-none">
                         <div class="announcement-call-wrapper">
                             <div class="announcement-call">
-                                <a class="announcement-text text-white" href="tel:+1-078-2376">Call: +8801912721070</a>
+                                <a class="announcement-text text-white" href="<?php echo BASE_URL;?>tel:+1-078-2376">Call: +8801912721070</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ $mail = new PHPMailer(true);
                     <div class="col-lg-3 d-lg-block d-none">
                         <div class="announcement-meta-wrapper d-flex align-items-center justify-content-end">
                             <div class="announcement-meta d-flex align-items-center">
-                                <a class="announcement-login announcement-text text-white" href="login.php">
+                                <a class="announcement-login announcement-text text-white" href="<?php echo BASE_URL;?>login.php">
                                     <i class="far fa-user"></i>
                                     <span>User Login</span>
                                 </a>
@@ -123,8 +123,8 @@ $mail = new PHPMailer(true);
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-4 col-4">
                             <div class="header-logo">
-                                <a href="index.php" class="logo-main">
-                                    <img src="assets/img/logo.png" loading="lazy" alt="">
+                                <a href="<?php echo BASE_URL;?>index.php" class="logo-main">
+                                    <img src="<?php echo BASE_URL;?>assets/img/logo.png" loading="lazy" alt="">
                                 </a>
                             </div>
                         </div>
@@ -132,17 +132,17 @@ $mail = new PHPMailer(true);
                             <nav class="site-navigation">
                                 <ul class="main-menu list-unstyled justify-content-center">
                                     <li class="menu-list-item nav-item active">
-                                        <a class="nav-link" href="index.php">Home</a>
+                                        <a class="nav-link" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>">Home</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <a class="nav-link" href="shop.php">Shop</a>
+                                        <a class="nav-link" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>shop.php">Shop</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <a class="nav-link" href="blog.php">Blog</a>
+                                        <a class="nav-link" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>blog.php">Blog</a>
                                     </li>
                                     <li class="menu-list-item nav-item has-dropdown">
                                         <div class="mega-menu-header">
-                                            <a class="nav-link" href="about-us.php">
+                                            <a class="nav-link" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>about-us.php">
                                                 Pages
                                             </a>
                                             <span class="open-submenu">
@@ -152,23 +152,23 @@ $mail = new PHPMailer(true);
                                         <div class="submenu-transform submenu-transform-desktop">
                                             <ul class="submenu list-unstyled">
                                                 <li class="menu-list-item nav-item-sub">
-                                                    <a class="nav-link-sub nav-text-sub" href="about-us.php">About Us</a>
+                                                    <a class="nav-link-sub nav-text-sub" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>about-us.php">About Us</a>
                                                 </li>
                                                 <li class="menu-list-item nav-item-sub">
-                                                    <a class="nav-link-sub nav-text-sub" href="faq.php">FAQ</a>
+                                                    <a class="nav-link-sub nav-text-sub" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>faq.php">FAQ</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <a class="nav-link" href="contact.php">Contact</a>
+                                        <a class="nav-link" href="<?php echo BASE_URL;?><?php echo BASE_URL;?>contact.php">Contact</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="col-lg-3 col-md-8 col-8">
                             <div class="header-action d-flex align-items-center justify-content-end">
-                                <a class="header-action-item header-search pt_5" href="javascript:void(0)">
+                                <a class="header-action-item header-search pt_5" href="<?php echo BASE_URL;?>javascript:void(0)">
                                     <svg class="icon icon-search" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -176,7 +176,7 @@ $mail = new PHPMailer(true);
                                             fill="black" />
                                     </svg>
                                 </a>
-                                <a class="header-action-item header-cart ms-4" href="cart.php">
+                                <a class="header-action-item header-cart ms-4" href="<?php echo BASE_URL;?>cart.php">
                                     <svg class="icon icon-cart" width="24" height="26" viewBox="0 0 24 26" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -184,7 +184,7 @@ $mail = new PHPMailer(true);
                                             fill="black" />
                                     </svg>
                                 </a>
-                                <a class="header-action-item header-hamburger ms-4 d-lg-none" href="#drawer-menu"
+                                <a class="header-action-item header-hamburger ms-4 d-lg-none" href="<?php echo BASE_URL;?>#drawer-menu"
                                     data-bs-toggle="offcanvas">
                                     <svg class="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="24"
                                         height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"
