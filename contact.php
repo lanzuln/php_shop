@@ -32,16 +32,16 @@ if (isset($_POST['send_email'])) {
         $mail = new PHPMailer(true);
 
         $mail->isSMTP();
-        $mail->Host = 'sandbox.smtp.mailtrap.io';
+        $mail->Host = SMTP_HOST;
         $mail->SMTPAuth = true;
-        $mail->Port = 587;
-        $mail->Username = 'adec5c968238ad';
-        $mail->Password = '3fba3d9a65e926';
-        $mail->SMTPSecure = 'tls';
-    
-        $mail->setFrom('lanzu@gmail.com');
-        $mail->addAddress('user@gmail.com');
-        $mail->addReplyTo('lanzu_from@gmail.com');
+        $mail->Port = SMTP_PORT;
+        $mail->Username = SMTP_USERNAME;
+        $mail->Password = SMTP_PASSWORD;
+        $mail->SMTPSecure = SMTP_ENCRYPTION;
+
+        $mail->setFrom(SMTP_FROM);
+        $mail->addAddress('lanzu.reply@gmail.com');
+        $mail->addReplyTo(SMTP_FROM);
 
         $mail_message = '<h2>Visitor Information</h2>';
         $mail_message .= '<strong>Name: </strong><br>' . $name . '<br><br>';
@@ -55,9 +55,19 @@ if (isset($_POST['send_email'])) {
 
 
         $mail->send();
-        
+
+        $_SESSION['success_message'] = 'Your message has been sent successfully';
+
+        unset($name);
+        unset($email);
+        unset($phone);
+        unset($message);
+        header("location: contact.php");
+        exit;
+
+
     } catch (Exception $e) {
-        $error_message = $e->getMessage();
+        $error_msg = $e->getMessage();
     }
 }
 ?>
@@ -136,11 +146,7 @@ if (isset($_POST['send_email'])) {
                         <p class="section-subheading">We would like to hear from you.</p>
                     </div>
                     <div class="contact-form--wrapper">
-                        <?php if (isset($error_message) && $error_message != ''): ?>
-                            <div class="alert alert-danger" role="alert">
-                                <?php echo $error_message; ?>
-                            </div>
-                        <?php endif; ?>
+               
                         <form action="" class="contact-form" method="post">
                             <div class="row">
                                 <div class="col-lg-4 col-md-12">
