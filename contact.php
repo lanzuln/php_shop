@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 
 
 if (isset($_POST['send_email'])) {
-    $name = strip_tags($_POST['name']);
+    $name = strip_tags($_POST['name']); //strip_tags() PHP-র একটি built-in function, যা একটি স্ট্রিং থেকে HTML এবং PHP tags রিমুভ করে দেয়।
     $email = strip_tags($_POST['email']);
     $phone = strip_tags($_POST['phone']);
     $message = trim(strip_tags($_POST['message'], '<br>'));

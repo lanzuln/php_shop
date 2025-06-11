@@ -1,16 +1,16 @@
 <?php ?>
 
-<script src="dist/js/jquery-3.6.3.min.js"></script>
-<script src="dist/js/bootstrap.min.js"></script>
-<script src="dist/js/feather.min.js"></script>
-<script src="dist/js/jquery.dataTables.min.js"></script>
-<script src="dist/js/dataTables.bootstrap5.min.js"></script>
-<script src="dist/tinymce/tinymce.min.js"></script>
-<script src="dist/js/select2.min.js"></script>
-<script src="dist/js/custom.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/js/jquery-3.6.3.min.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/js/bootstrap.min.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/js/feather.min.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/js/jquery.dataTables.min.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/js/dataTables.bootstrap5.min.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/tinymce/tinymce.min.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/js/select2.min.js"></script>
+<script href="<?php echo ADMIN_URL;?>dist/js/custom.js"></script>
 
 <?php if ($page_name == 'index.php'): ?>
-    <script src="dist/js/chart.min.js"></script>
+    <script href="<?php echo ADMIN_URL;?>dist/js/chart.min.js"></script>
     <script>
         // Graphs
         const ctx = document.getElementById('myChart');

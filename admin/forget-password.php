@@ -12,7 +12,7 @@
                 <button class="w-100 btn btn-lg btn-primary" type="submit" name="form1">Submit</button>
             </form>
             <div class="login-forget-password">
-                <a href="login.php">Back to Login Page</a>
+                <a href="<?php echo ADMIN_URL;?>login.php">Back to Login Page</a>
             </div>
         </main>
     </div>

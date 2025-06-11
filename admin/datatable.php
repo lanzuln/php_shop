@@ -9,7 +9,7 @@
 
             <h1 class="page-heading">
                 Datatable
-                <a href="form.php" class="btn btn-primary btn-sm right"><i class="fas fa-plus"></i> Add New</a>
+                <a href="<?php echo ADMIN_URL;?>form.php" class="btn btn-primary btn-sm right"><i class="fas fa-plus"></i> Add New</a>
             </h1>
 
             <div class="table-responsive">
