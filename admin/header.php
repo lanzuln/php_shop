@@ -2,6 +2,12 @@
 ob_start();
 session_start();
 include "../config/config.php";
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+require '../vendor/autoload.php';
+
 //এটা current file এর নাম বলে দিবে extension সহ।
 $page_name = basename($_SERVER['PHP_SELF']);
 

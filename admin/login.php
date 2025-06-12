@@ -38,7 +38,7 @@ if (isset($_POST['login_form'])) {
         exit;
 
     } catch (Exception $e) {
-        $error_msg = $e->getMessage();
+        $error_message = $e->getMessage();
     }
 }
 ?>

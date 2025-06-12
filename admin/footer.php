@@ -77,12 +77,13 @@
 
 <?php endif; ?>
 
-<?php if (isset($error_msg)): ?>
+<?php if (isset($error_message)): ?>
     <script>
         const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
             showConfirmButton: false,
+            showCloseButton: true, 
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
@@ -92,7 +93,7 @@
         });
         Toast.fire({
             icon: "error",
-            title: "<?php echo $error_msg; ?>"
+            title: "<?php echo $error_message; ?>"
         });
     </script>
 
@@ -103,7 +104,8 @@
         const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
-            showConfirmButton: false,
+             showConfirmButton: false,
+            showCloseButton: true, 
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
