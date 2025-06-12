@@ -1,9 +1,18 @@
 <?php
+ob_start();
+session_start();
 include "../config/config.php";
 //এটা current file এর নাম বলে দিবে extension সহ।
 $page_name = basename($_SERVER['PHP_SELF']);
 
 $body_class = ($page_name == 'login.php' || $page_name == 'reset-password.php' ||  $page_name == 'forget-password.php') ? 'body-login' : " ";
+
+if($page_name != 'login.php' && $page_name != 'forget-password.php' && $page_name != 'reset-password.php') {
+    if(!isset($_SESSION['admin'])) {
+        header("location: ".ADMIN_URL."login.php");
+        exit;
+    }
+}
 ?>
 
 <!DOCTYPE html>
