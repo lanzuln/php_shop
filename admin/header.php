@@ -1,12 +1,16 @@
 <?php
 ob_start();
 session_start();
-include "../config/config.php";
+include_once(__DIR__ . '/../config/config.php');     // ✅ Safe include
+require_once(__DIR__ . '/../vendor/autoload.php');   // ✅ Composer autoload
+
+// include_once('../config/config.php'); // ✅ Always works
+// require_once('../vendor/autoload.php'); // ✅ Always works
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require '../vendor/autoload.php';
 
 //এটা current file এর নাম বলে দিবে extension সহ।
 $page_name = basename($_SERVER['PHP_SELF']);
